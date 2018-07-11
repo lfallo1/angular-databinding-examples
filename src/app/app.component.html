@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <app-add-server-button (onAddServer)="onAddServer($event)">
+      <table class="table table-responsive" firstContent>
+        <tbody>
+          <tr>
+            <td>col 1</td>
+            <td>col 2</td>
+            <td>col 3</td>
+          </tr>
+        </tbody>
+      </table>
+      <strong secondContent>This is the second custom inner ng-content elemenet</strong>
+      <div>
+        <ul>
+          <li>This</li>
+          <li>is</li>
+          <li>a</li>
+          <li>list</li>
+        </ul>
+      </div>
+    </app-add-server-button>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server *ngFor="let server of serverElements" [server]="server"></app-server>
+    </div>
+  </div>
+</div>
